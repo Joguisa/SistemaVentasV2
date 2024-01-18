@@ -1,4 +1,6 @@
-﻿namespace POS.Application.Dtos.User.Request
+﻿using Microsoft.AspNetCore.Http;
+
+namespace POS.Application.Dtos.User.Request
 {
     public class UserRequestDto
     {
@@ -6,6 +8,6 @@
         public string? Password { get; set; }
         public string? Email { get; set; }
         public int? State { get; set; }
-        public string? Image { get; set; }
+        public IFormFile? Image { get; set; }
     }
 }

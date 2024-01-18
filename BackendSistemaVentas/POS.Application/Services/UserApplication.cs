@@ -57,6 +57,11 @@ namespace POS.Application.Services
             // vamos a hashear el password
             account.Password = BC.HashPassword(account.Password);
 
+            if (requestDto.Image is not null)
+            {
+                account.Image = await _unitOfWork.Storage.SaveFile(AzureContainers.USERS, requestDto.Image);
+            }
+
             response.Data = await _unitOfWork.User.RegisterAsync(account);
 
             if (response.Data)
@@ -92,7 +97,7 @@ namespace POS.Application.Services
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Issuer"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddHours(int.Parse(_configuration["Jwt:Expires"])),
+                expires: DateTime.UtcNow.AddMinutes(int.Parse(_configuration["Jwt:Expires"])),
                 notBefore: DateTime.UtcNow,
                 signingCredentials: credentials
                 );
