@@ -10,8 +10,8 @@ namespace POS.Infrastructure.Persistences.Interfaces
         // Declaración o matricula de nuestras interfaces a nivel de repositorio
         ICategoryRepository Category { get; }
         IUserRepository User { get; }
-
         IAzureStorage Storage { get; }
+        IProviderRepository Provider { get; }
         void SaveChanges();
         Task SaveChangesAsync();
     }

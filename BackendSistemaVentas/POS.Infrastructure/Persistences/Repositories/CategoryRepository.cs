@@ -19,7 +19,8 @@ namespace POS.Infrastructure.Persistences.Repositories
             //                  where c.AuditDeleteUser == null && c.AuditDeleteDate == null
             //                  select c).AsNoTracking().AsQueryable();
 
-            var categories = GetEntityQuery(x => x.AuditDeleteUser == null && x.AuditDeleteDate == null);
+            var categories = GetEntityQuery(x => x.AuditDeleteUser == null && x.AuditDeleteDate == null)
+                .AsNoTracking();
             // condicion de los filtros
             if (filters.NumFilter is not null && !string.IsNullOrEmpty(filters.TextFilter))
             {

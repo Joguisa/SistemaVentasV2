@@ -2,7 +2,6 @@
 using FluentValidation.AspNetCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 using POS.Application.Interfaces;
 using POS.Application.Services;
 using System.Reflection;
@@ -33,6 +32,7 @@ namespace POS.Application.Extensions
             // registrar un ciclo de vida scoped
             services.AddScoped<ICategoryApplication, CategoryApplication>();
             services.AddScoped<IUserApplication, UserApplication>();
+            services.AddScoped<IProviderApplication, ProviderApplication>();
 
             return services;
         }

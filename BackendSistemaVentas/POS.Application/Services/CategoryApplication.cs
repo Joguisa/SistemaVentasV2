@@ -12,7 +12,7 @@ using POS.Utilities.Static;
 
 namespace POS.Application.Services
 {
-    internal class CategoryApplication : ICategoryApplication
+    public class CategoryApplication : ICategoryApplication
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;

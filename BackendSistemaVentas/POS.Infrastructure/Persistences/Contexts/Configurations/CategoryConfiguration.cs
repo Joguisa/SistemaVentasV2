@@ -11,6 +11,7 @@ namespace POS.Infrastructure.Persistences.Contexts.Configurations
             builder.HasKey(e => e.Id);
             builder.Property(e => e.Id)
                 .HasColumnName("CategoryId");
+
             builder.Property(e => e.Name).HasMaxLength(100);
         }
     }
