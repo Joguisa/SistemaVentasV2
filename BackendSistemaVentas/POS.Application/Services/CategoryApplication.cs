@@ -35,7 +35,8 @@ namespace POS.Application.Services
                 response.IsSuccess = true;
                 response.Data = _mapper.Map<BaseEntityResponse<CategoryResponseDto>>(categories);
                 response.Message = ReplyMessage.MESSAGE_QUERY;
-            } else
+            }
+            else
             {
                 response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_QUERY_EMPTY;
@@ -53,7 +54,8 @@ namespace POS.Application.Services
                 response.IsSuccess = true;
                 response.Data = _mapper.Map<IEnumerable<CategorySelectResponseDto>>(categories); //mapeo estre la categoría y el DTO
                 response.Message = ReplyMessage.MESSAGE_QUERY;
-            } else
+            }
+            else
             {
                 response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_QUERY_EMPTY;
@@ -71,7 +73,8 @@ namespace POS.Application.Services
                 response.IsSuccess = true;
                 response.Data = _mapper.Map<CategoryResponseDto>(category);
                 response.Message = ReplyMessage.MESSAGE_QUERY;
-            } else
+            }
+            else
             {
                 response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_QUERY_EMPTY;
@@ -99,7 +102,8 @@ namespace POS.Application.Services
             {
                 response.IsSuccess = true;
                 response.Message = ReplyMessage.MESSAGE_SAVE;
-            } else
+            }
+            else
             {
                 response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_FAILED;
@@ -128,7 +132,8 @@ namespace POS.Application.Services
             {
                 response.IsSuccess = true;
                 response.Message = ReplyMessage.MESSAGE_UPDATE;
-            } else
+            }
+            else
             {
                 response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_FAILED;
@@ -153,7 +158,8 @@ namespace POS.Application.Services
             {
                 response.IsSuccess = true;
                 response.Message = ReplyMessage.MESSAGE_DELETE;
-            } else
+            }
+            else
             {
                 response.IsSuccess = false;
                 response.Message = ReplyMessage.MESSAGE_FAILED;
