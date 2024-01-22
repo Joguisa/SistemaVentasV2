@@ -14,6 +14,7 @@
         public static string MESSAGE_VALIDATE = "Hay errores de validación.";
         public static string MESSAGE_FAILED = "Operación fallida.";
         public static string MESSAGE_ERROR = "Ocurrio un error al procesar la solicitud.";
-
+        public static string MESSAGE_EXCEPTION = "Hubo un error inesperado, comunicarse con el administrador.";
     }
 }
+
